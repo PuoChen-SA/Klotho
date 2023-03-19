@@ -1,0 +1,5 @@
+profession:
+  loaded: "&a从 {0} 中载入职业 {1}"
+  exists: "&4{0} 已经存在"
+  select:
+    success: "你已经选择了 {0} 职业"

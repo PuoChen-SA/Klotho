@@ -1,0 +1,16 @@
+skills:
+  - name: Fireball
+    description: Launches a fireball at the target
+    cost: 5
+    cooldown: 5000
+    action: |-
+      js
+      function (player, target) {
+        var world = player.getWorld();
+        var location = player.getLocation();
+        var direction = location.getDirection();
+        var fireball = world.spawn(location.add(direction), Fireball.class);
+        fireball.setDirection(direction.multiply(2));
+        fireball.setShooter(player);
+        world.playSound(location, Sound.ENTITY_GHAST_SHOOT, 1, 1);
+      }
